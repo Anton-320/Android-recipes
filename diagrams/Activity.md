@@ -8,7 +8,7 @@
 
 ### 1. Вход в аккаунт<a name="1"></a>
 
-![Вход в аккаунт](diagrams/images/diagram_activity_input.png)
+![Вход в аккаунт](images/diagram_activity_input.png)
 
 ### 2. Регистрация<a name="2"></a>
 
