@@ -6,10 +6,15 @@
 
 | Класс | Описание |
 |:---|:---|
-| MainActivity | Главное окно приложения |
-| RegistrationActivity | Окно регистрации |
-| LoginActivity | Окно входа |
-| CreateTaskActivity | Окно создания задачи |
-| UpdateTaskActivity | Окно редактирования задачи |
-| Task | Класс события |
-| User | Класс пользователя |
+| AppCompatActivity | Базовый класс активностей, использующих современные функции Android |
+| SignUpActivity | Класс окна регистрации |
+| SignInActivity | Класс окна входа в аккаунт |
+| RecipeViewActivity | Класс окна просмотра рецепта |
+| RecipesListActivity | Класс окна просмотра списка рецептов |
+| RecipeEditActivity | Класс окна редактирования рецепта |
+| RecipeCreateActivity | Класс окна создания рецепта |
+| IngredientsListShowAdapter | Класс адаптера списка просмотра ингредиентов |
+| IngredientsListEditAdapter | Класс адаптера списка редактирования ингредиентов |
+| RecipesListAdapter | Класс адаптера списка просмотра списка рецептов |
+| DatabaseHelper | Класс для взаимодействия с базой данных |
+
