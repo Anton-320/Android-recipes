@@ -12,8 +12,8 @@
 
 ### 2. Регистрация<a name="2"></a>
 
-![Регистрация](images/login_activity_diagram.png)
+![Регистрация](images/diagram_activity_registration.png)
   
 ### 3. Создание задачм<a name="3"></a>
 
-![Создание задачи]()
+![Создание задачи](images/diagram_activity_view_recipe.png)
