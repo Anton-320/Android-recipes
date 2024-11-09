@@ -14,6 +14,6 @@
 
 ![Регистрация](images/diagram_activity_registration.png)
   
-### 3. Создание задачм<a name="3"></a>
+### 3. Создание задачи<a name="3"></a>
 
 ![Создание задачи](images/diagram_activity_view_recipe.png)
