@@ -3,7 +3,7 @@
 # Содержание
 1. [Вход в аккаунт](#1)
 2. [Регистрация](#2)
-3. [Создание задачи](#3)
+3. [Просмотр рецепта](#3)
 
 
 ### 1. Вход в аккаунт<a name="1"></a>
@@ -14,6 +14,6 @@
 
 ![Регистрация](images/diagram_sequence_registration.png)
   
-### 3. Создание задачи<a name="3"></a>
+### 3. Просмотр рецепта<a name="3"></a>
 
-![Создание события](images/diagram_sequence_view_recipe.png)
+![Просмотр рецепта](images/diagram_sequence_view_recipe.png)
