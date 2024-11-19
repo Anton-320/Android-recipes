@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.byshnev.recipebook.R
 import com.byshnev.recipebook.database.DatabaseHelper
 
-
 class SignInActivity : AppCompatActivity() {
 
     private lateinit var login: EditText
