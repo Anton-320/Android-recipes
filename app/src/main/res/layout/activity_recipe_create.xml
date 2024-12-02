@@ -27,26 +27,30 @@
 
         <EditText
             android:id="@+id/portionsAmountInput"
-            android:layout_width="370dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="54dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/authentification_input_forms"
             android:hint="Введите количество порций"
             android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cookingTimeInput" />
 
         <EditText
             android:id="@+id/cookingTimeInput"
-            android:layout_width="370dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="54dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/authentification_input_forms"
             android:hint="Введите примерное время приготовления"
             android:maxHeight="100dp"
             android:minHeight="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dishNameInput" />
 
@@ -54,7 +58,7 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="5dp"
             android:text="Количество порций"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -63,12 +67,14 @@
 
         <EditText
             android:id="@+id/dishNameInput"
-            android:layout_width="370dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="52dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/authentification_input_forms"
             android:hint="Введите название блюда"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -77,12 +83,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginBottom="5dp"
             android:text="Название блюда"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/dishNameInput"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textView11"
@@ -95,6 +101,7 @@
             android:text="Ингридиенты"
             android:textSize="16sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/portionsAmountInput" />
 
@@ -122,34 +129,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recipeInstructionsInput">
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/exitButton"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
-                android:layout_marginEnd="52dp"
                 android:layout_marginBottom="4dp"
                 android:clickable="true"
                 android:gravity="center"
                 android:text="Выйти"
                 android:textColor="#51F0DD"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.75"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/editDishButton"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
-                android:layout_marginEnd="240dp"
+                android:layout_marginEnd="68dp"
                 android:layout_marginBottom="4dp"
                 android:clickable="true"
                 android:gravity="center"
                 android:text="Сохранить блюдо"
                 android:textColor="#51F0DD"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <EditText
@@ -160,6 +169,7 @@
             android:gravity="clip_vertical"
             android:hint="Введите инструкции по приготовлению"
             android:minHeight="300dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
