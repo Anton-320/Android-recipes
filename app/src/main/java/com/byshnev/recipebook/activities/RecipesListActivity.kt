@@ -119,7 +119,7 @@ class RecipesListActivity : AppCompatActivity() {
                 var toast: Toast? = null
                 if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE && viewHolder != null) {
                     // Показать сообщение при начале перетаскивания
-                    toast = Toast.makeText(viewHolder.itemView.context, "Удалить рецепт", Toast.LENGTH_LONG)
+                    toast = Toast.makeText(viewHolder.itemView.context, "Удалить рецепт", Toast.LENGTH_SHORT)
                     toast?.show()
                 } else if (actionState == ItemTouchHelper.ACTION_STATE_IDLE) {
                     toast?.cancel()
@@ -147,7 +147,7 @@ class RecipesListActivity : AppCompatActivity() {
                 super.onSelectedChanged(viewHolder, actionState)
                 var toast: Toast? = null
                 if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE && viewHolder != null) {
-                    toast = Toast.makeText(viewHolder.itemView.context, "Редактировать рецепт", Toast.LENGTH_LONG)
+                    toast = Toast.makeText(viewHolder.itemView.context, "Редактировать рецепт", Toast.LENGTH_SHORT)
                     toast?.show()
                 } else if (actionState == ItemTouchHelper.ACTION_STATE_IDLE) {
                     toast?.cancel()
