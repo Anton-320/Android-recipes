@@ -36,6 +36,14 @@ class SignInActivity : AppCompatActivity() {
         }
     }
 
+    companion object {
+        init {
+            System.loadLibrary("recipebook")
+        }
+    }
+
+    external fun stringsAreEqual(str1: String, str2: String): Boolean
+
     fun trySignIn(view: View) {
         db = dbHelper.writableDatabase
         val currentLogin = login.text.toString()
@@ -48,7 +56,7 @@ class SignInActivity : AppCompatActivity() {
 
         if (userCursor != null && userCursor.moveToFirst()) {
             val realPassword = userCursor.getString(userCursor.getColumnIndexOrThrow(DatabaseHelper.CRED_PASSWORD))
-            if (realPassword == currentPassword) {
+            if (stringsAreEqual(realPassword, currentPassword)) {
                 Toast.makeText(this, "Успешный вход", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, RecipesListActivity::class.java)
                 intent.putExtra("USER_ID", userCursor.getLong(userCursor.getColumnIndexOrThrow(
