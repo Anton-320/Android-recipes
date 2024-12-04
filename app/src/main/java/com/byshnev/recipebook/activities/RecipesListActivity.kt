@@ -40,6 +40,8 @@ class RecipesListActivity : AppCompatActivity() {
 
     private var userId: Long = -1
 
+    private var previosRequestWasAllRecipes: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe_list)
@@ -84,6 +86,12 @@ class RecipesListActivity : AppCompatActivity() {
 
         searchButton.setOnClickListener {
             filterItems(searchBar.text.toString())
+            previosRequestWasAllRecipes = false
+        }
+
+        showAllRecipesBtn.setOnClickListener {
+            showAllRecipes()
+            previosRequestWasAllRecipes = true
         }
     }
 
@@ -92,6 +100,16 @@ class RecipesListActivity : AppCompatActivity() {
         db = dbHelper.writableDatabase
         filterItems(searchBar.text.toString())
     }
+
+    override fun onResume() {
+        super.onResume()
+        if (previosRequestWasAllRecipes) {
+            showAllRecipes()
+        } else {
+            filterItems(searchBar.text.toString())
+        }
+    }
+
 
     override fun onStop() {
         super.onStop()
@@ -204,7 +222,7 @@ class RecipesListActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun showAllRecipes(view: View) {
+    fun showAllRecipes() {
         filteredRecipes.clear()
 
         val cursor = db.rawQuery("SELECT ${RCP_ID}, ${RCP_NAME} FROM ${RCP_TABLE_NAME}", null)

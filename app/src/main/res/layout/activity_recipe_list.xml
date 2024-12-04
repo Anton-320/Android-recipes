@@ -108,7 +108,6 @@
             android:focusable="true"
             android:gravity="center"
             android:minWidth="90dp"
-            android:onClick="showAllRecipes"
             android:text="Все блюда"
             android:textColor="#51F0DD"
             app:layout_constraintEnd_toStartOf="@+id/exitBtn"

@@ -175,6 +175,7 @@
             android:id="@+id/exitButton"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:layout_marginStart="50dp"
             android:layout_marginBottom="4dp"
             android:clickable="true"
             android:gravity="center"
@@ -183,8 +184,7 @@
             android:textColor="#51F0DD"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.75"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/editDishButton" />
 
         <TextView
             android:id="@+id/editDishButton"
